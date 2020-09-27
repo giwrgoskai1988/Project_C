@@ -1,0 +1,168 @@
+﻿/*Css reset*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+}
+
+
+
+.container {
+    max-width: 100%;
+    background-image: url(../images/background.jpg);
+   
+}
+
+    .container .header .logo {
+        margin-top: 20px;
+        width: 150px;
+        height: 150px;
+        margin-left: 50px;
+        float: left;
+    }
+
+
+.container .header > header {
+    height:200px;
+    width: 100%;  
+}
+
+ /*-------------------------------------- Heading --------------------------------------*/
+
+.container .header > header > h1{
+    display:inline-block;
+    margin-left:250px;
+    height:100px;
+    font-size:100px;
+    text-align:center; 
+    font-style:italic;
+    padding-top:50px;
+}
+
+
+/*--------------------------------------Top Navigation--------------------------------------*/
+
+.container .nav ul {
+    height:30px;
+    width:100%;
+    background-color: black; 
+
+
+}
+
+    .container .nav ul li {
+        width: 100%;
+        display: inline;
+        
+    }
+
+        .container .nav ul li a {
+            padding: 5px 20px; 
+            text-decoration: none;
+            font-size: 20px;
+            color: white;
+            float: right;
+        }
+
+
+
+/*--------------------------------------Side navigation--------------------------------------*/
+
+.container .sidenav {
+    background-image: url(../images/side_nav.jpg);
+    margin: 0px;
+    width: 200px;
+    height:600px;
+    border: 2px solid black;
+    top:228px;
+    position:absolute;
+    left: 0;
+
+}
+
+
+.container .sidenav .login {
+    margin-left:10px;
+    display:block;
+}
+
+.container .sidenav label{
+    font-weight:bold;
+    font-size:18px;
+}
+
+.container .sidenav .login input{
+    height:20px;
+}
+
+#search{
+    margin-left:10px;
+    margin-bottom:20px;
+    height:25px;   
+}
+
+.container .sidenav  aside > label {
+    font-weight: bold;
+    font-size: 18px;
+    margin-left:10px;
+}
+
+
+#login{
+    width:100px;
+    margin-top:20px;
+    font-weight:bold;
+}
+
+
+
+.container .sidenav ul li a{
+    padding-top:40px;
+    display:block;
+    color:black;
+    font-weight:bold;
+    text-decoration:none;
+    font-size:20px;
+
+}
+
+
+
+
+
+
+
+/*--------------------------------------Main----------------------------------------*/
+
+.container .main_content {
+    margin: 50px 50px 50px 240px;
+    min-height: 700px;
+    max-width: 100%;
+}
+
+
+
+
+.footer{
+    height:50px;
+    width:100%;
+    background-image:url(../images/footer.jpg);
+    position:relative;
+    bottom:0;
+    color:white;
+ 
+}
