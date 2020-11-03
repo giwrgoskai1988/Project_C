@@ -19,81 +19,81 @@ time, mark, audio, video {
     font-size: 100%;
 }
 
-
-
+html, body , footer{
+    width:100%;
+    height:100%;
+}
 .container {
     max-width: 100%;
-    background-image: url(../images/background.jpg);
-   
+    max-height:100%;
+    background-image: url(../images/background.png);
+    overflow:auto;
 }
 
     .container .header .logo {
         margin-top: 20px;
-        width: 150px;
+        max-width: 100%;
         height: 150px;
         margin-left: 50px;
         float: left;
     }
 
-
-.container .header > header {
-    height:200px;
-    width: 100%;  
-}
+    .container .header > header {
+        height: 200px;
+        max-width: 100%;
+    }
 
  /*-------------------------------------- Heading --------------------------------------*/
 
-.container .header > header > h1{
-    display:inline-block;
-    margin-left:250px;
-    height:100px;
-    font-size:100px;
-    text-align:center; 
-    font-style:italic;
-    padding-top:50px;
-}
-
+        .container .header > header > h1 {
+           max-width : 1300px;
+            margin-left: 250px;
+            font-size: 100px;
+            text-align: center;
+            font-style: italic;
+            padding-top: 50px;
+            min-width:800px;
+            white-space:nowrap;
+        }
 
 /*--------------------------------------Top Navigation--------------------------------------*/
 
-.container .nav ul {
-    height:30px;
-    width:100%;
-    background-color: black; 
-
-
-}
-
-    .container .nav ul li {
+    .container .nav ul {
+        height: 40px;
         width: 100%;
-        display: inline;
-        
+        background-color: black;
     }
 
-        .container .nav ul li a {
-            padding: 5px 20px; 
-            text-decoration: none;
-            font-size: 20px;
-            color: white;
-            float: right;
+        .container .nav ul li {
+            width: 100%;
+            display: inline;
         }
 
+            .container .nav ul li a {
+                padding: 8px 20px;
+                text-decoration: none;
+                font-size: 20px;
+                color: white;
+                float: right;
+                white-space: nowrap;
+            }
 
+                .container .nav ul li a:hover {
+                    transform: scale(0.95);
+                    background-color: #b3b3b3;
+                }
 
-/*--------------------------------------Side navigation--------------------------------------*/
+ /*--------------------------------------Side navigation--------------------------------------*/
 
-.container .sidenav {
-    background-image: url(../images/side_nav.jpg);
-    margin: 0px;
-    width: 200px;
-    height:600px;
-    border: 2px solid black;
-    top:228px;
-    position:absolute;
-    left: 0;
-
-}
-
+ .container .sidenav {
+        background-image: url(../images/side_nav.jpg);
+        margin: 0px;
+        width: 200px;
+        height: 500px;
+        border: 2px solid black;
+        float: left;
+        border-top: none;
+    }
 
 .container .sidenav .login {
     margin-left:10px;
@@ -121,14 +121,11 @@ time, mark, audio, video {
     margin-left:10px;
 }
 
-
 #login{
     width:100px;
     margin-top:20px;
     font-weight:bold;
 }
-
-
 
 .container .sidenav ul li a{
     padding-top:40px;
@@ -137,32 +134,466 @@ time, mark, audio, video {
     font-weight:bold;
     text-decoration:none;
     font-size:20px;
-
+    margin-left:10px;
 }
-
-
-
-
-
-
-
-/*--------------------------------------Main----------------------------------------*/
-
-.container .main_content {
+.container .sidenav ul li a:hover {
+    transform:scale(1.04);
+}
+    /*----------------------------------------------------------------------Main----------------------------------------------------------------*/
+    .container .main_content {
     margin: 50px 50px 50px 240px;
     min-height: 700px;
     max-width: 100%;
 }
 
 
+.welcome h1{
+    font-size:70px;
+    text-align:center;
+    font-style:italic;
+}
 
+.main_content h2{
+    margin-top:10px;
+    font-size:25px;
+}
 
-.footer{
-    height:50px;
+.main_content .index p{
+    margin-top:18px;
     width:100%;
-    background-image:url(../images/footer.jpg);
-    position:relative;
-    bottom:0;
-    color:white;
- 
+    font-size:20px;
+}
+
+.main_content .why_us p {
+    margin-top: 18px;
+    width: 100%;
+    font-size: 20px;
+}
+
+.main_content .careers h3{
+    margin-top:40px;
+    font-size:50px;
+    font-style:italic;
+    text-align:center;
+}
+
+.index .careers h2{
+    text-decoration:underline;
+}
+
+.main_content .certification h3 {
+    margin-top: 40px;
+    font-size: 50px;
+    font-style: italic;
+    text-align: center;
+}
+
+.main_content .why_us h4 {
+    margin-top: 40px;
+    font-size: 50px;
+    font-style: italic;
+    text-align: center;
+}
+
+/*------------------------------------------------------------------Tables------------------------------------------------------------------*/
+
+.container .main_content .table table {
+    width: 100%;
+    margin: auto;
+    table-layout: fixed;
+}
+
+table td {
+    word-wrap: break-word;
+}
+
+    .container .main_content .table th {
+        border: 3px solid black;
+        border-collapse: collapse;
+        background-color: #808080;
+        padding: 10px 20px;
+        font-size: 25px;
+        text-align: center;
+        overflow: hidden;
+    }
+
+thead tr th:nth-child(1) {
+    width:80px;
+}
+
+thead tr th:last-child {
+    width: 150px;
+}
+
+#course_head tr th:nth-child(2){
+    width:80px;
+}
+
+table tr:nth-child(even) {
+    background-color: #999999;
+}
+
+tbody tr td:first-child {
+    text-align:center;
+    font-weight:bold;
+    font-size:30px;
+}
+
+#ass_head tr th:nth-child(5){
+    width:50px;
+}
+#ass_head tr th:nth-child(6) {
+    width: 50px;
+}
+
+#ass_head tr th:nth-child(4) {
+    width: 120px;   
+}
+
+#ass_data tr td:nth-child(5) {
+    text-align:center;
+}
+#ass_data tr td:nth-child(6) {
+    text-align:center;
+}
+
+    .container .main_content .table table, td {
+        border: 2px solid black;
+        border-collapse: collapse;
+        padding: 20px;
+        font-size: 20px;
+        overflow:auto;
+    }
+
+.container .main_content .table caption{
+    font-size:60px;
+    font-weight:bold;
+}
+
+table ul li{
+    list-style:none;
+}
+
+
+
+
+/*--------------------------------------------------------------------Table , Action--------------------------------------------------------------------------------*/
+
+    .container .main_content .table p {
+        border: 2px solid black;
+        display: inline-block;
+        font-size: 20px;
+        font-weight: bold;
+        background-color: #beab94;
+        border-radius: 15px;
+        padding: 10px;
+        box-shadow: 0px 0px 10px 0px #424242;
+        margin-left:3px;
+    }
+
+        .container .main_content .table p:hover {
+            cursor: pointer;
+            background-color: #00994f;
+            transform:scale(1.1);
+        }
+
+        .container .main_content .table p:nth-child(2):hover {
+            cursor: pointer;
+            background-color: #ff3333;
+        }
+
+
+/*------------------------------------------------------------Add button--------------------------------------------------------------*/
+
+#create_course , #create_trainer , #create_student, #create_ass{
+    margin: auto;
+    width: 150px;
+    border: 2px solid black;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #beab94;
+    border-radius: 20px;
+    padding: 15px;
+    margin-top: 25px;
+    box-shadow: 0px 0px 20px 0px #424242;
+}
+
+#create_course:hover , #create_trainer:hover , #create_student:hover ,#create_ass:hover {
+       cursor:pointer;
+       transform:scale(1.1);
+    }
+
+/*----------------------------------------------------------------Buttons on form-----------------------------------------------------------------------*/
+#course_forma label, input{  
+    margin:3px;
+    height:25px;
+    font-weight:bold; 
+}
+
+#trainer_forma label, input {
+    margin: 3px;
+    height: 25px;
+    font-weight: bold;
+}
+
+#student_forma label, input {
+    margin: 3px;
+    height: 25px;
+    font-weight: bold;
+}
+
+#ass_forma label, iput {
+    margin: 3px;
+    height: 25px;
+    font-weight: bold;
+}
+
+#submit_created_course, #submit_edited_course, #submit_created_trainer, #submit_edited_trainer,
+#submit_created_student, #submit_edited_student, #submit_created_ass, #submit_edited_ass, #submit_as, #submit_st, #submit_tr, #remove_as, #remove_tr, #remove_st, #remove_sta, #submit_sta,
+#submit_cs_tr, #submit_cs_as,#remove_cs_tr,#remove_cs_as,#submit_cs_st,#remove_cs_st {
+    margin-top: 40px;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    background-color: #33C7FF;
+    border: 2px solid black;
+    box-shadow: 0px 0px 5px 0px #424242;
+    font-size: 15px;
+    margin-right: 30px;
+}
+
+#close_courseCreate, #close_trainerCreate, #close_studentCreate, #close_assCreate, .close  {
+    margin-top: 40px;
+    height: 40px;
+    width: 100px;
+    text-align: center;
+    background-color: #33C7FF;
+    border: 2px solid black;
+    box-shadow: 0px 0px 5px 0px #424242;
+    font-size: 15px;
+}
+
+    #close_courseCreate:hover, #close_trainerCreate:hover, #close_studentCreate:hover, #close_assCreate:hover, .close:hover {
+        cursor: pointer;
+        background-color: #ff3333;
+        transform: scale(1.1);
+    }
+
+#submit_created_course:hover, #submit_edited_course:hover, #submit_created_trainer:hover, #submit_edited_trainer:hover,
+#submit_created_student:hover, #submit_edited_student:hover, #submit_created_ass:hover, #submit_edited_ass:hover,
+#submit_as:hover, #submit_st:hover, #submit_tr:hover, #remove_as:hover, #remove_sta:hover, #submit_sta:hover,#submit_cs_tr:hover,#submit_cs_as:hover,#remove_cs_tr:hover,
+#remove_cs_as:hover,#remove_cs_st:hover,#submit_cs_st:hover
+{
+    cursor: pointer;
+    background-color: #00994f;
+    transform: scale(1.1);
+}
+
+/*----------------------------------------------Hover Form for course Create-------------------------------------------*/
+    #course_formCreate {
+        position: absolute;
+        margin: 0 auto;
+        top: 150px;
+        left: 650px;
+        width: 300px;
+        height: 450px;
+        background-image: url(../images/9b5eab9158f3cda48e8751cc2670e121.jpg);
+        border-radius: 10px;
+        box-shadow: 0px 0px 60px 0px #424242;
+        padding: 60px;
+        font-size: 15px;
+        font-family: helvetica;
+        display: none;
+        z-index: 3;
+    }
+
+#course_formCreate img{
+    max-height:100%;
+    max-width:100%;
+}
+
+input[type=radio] {
+   height:15px;
+   width:20px;
+}
+
+/*-----------------------------------------------------------Hover form for trainer--------------------------------------------------*/
+
+#trainer_formCreate {
+    position: absolute;
+    margin: 0 auto;
+    top: 150px;
+    left: 650px;
+    width: 300px;
+    height: 350px;
+    background-image: url(../images/9b5eab9158f3cda48e8751cc2670e121.jpg);
+    border-radius: 10px;
+    box-shadow: 0px 0px 60px 0px #424242;
+    padding: 60px;
+    font-size: 15px;
+    font-family: helvetica;
+    display: none;
+    z-index: 3;
+}
+
+    #trainer_formCreate img {
+        max-height: 100%;
+        max-width: 100%;
+    }
+
+/*-----------------------------------------------------------Hover form for Student--------------------------------------------------*/
+
+#student_formCreate {
+    position: absolute;
+    margin: 0 auto;
+    top: 150px;
+    left: 650px;
+    width: 300px;
+    height: 400px;
+    background-image: url(../images/9b5eab9158f3cda48e8751cc2670e121.jpg);
+    border-radius: 10px;
+    box-shadow: 0px 0px 60px 0px #424242;
+    padding: 60px;
+    font-size: 15px;
+    font-family: helvetica;
+    display: none;
+    z-index: 3;
+}
+
+    #student_formCreate img {
+        max-height: 100%;
+        max-width: 100%;
+    }
+
+/*-----------------------------------------------------------Hover form for Assignment--------------------------------------------------*/
+
+#ass_formCreate {
+    position: absolute;
+    margin: 0 auto;
+    top: 150px;
+    left: 650px;
+    width: 300px;
+    height: 450px;
+    background-image: url(../images/9b5eab9158f3cda48e8751cc2670e121.jpg);
+    border-radius: 10px;
+    box-shadow: 0px 0px 60px 0px #424242;
+    padding: 60px;
+    font-size: 15px;
+    font-family: helvetica;
+    display: none;
+    z-index: 3;
+}
+
+    #ass_formCreate img {
+        max-height: 100%;
+        max-width: 100%;
+    }
+
+/*--------------------------------------Footer----------------------------------------*/
+.footer {
+    height: 130px;
+    width: 100%;
+    background-image: url(../images/footer.jpg);
+    bottom: 0;
+    color: white;
+    text-align:center;
+}
+
+.footer i  {
+    font-size:20px;
+}
+
+.footer ul{
+    margin-bottom:20px;
+}
+
+.footer li{
+    display:inline-block;
+    margin:5px;
+    margin-top:20px;
+}
+
+.footer img{
+    width:30px;
+    height:30px;
+}
+
+.footer img:hover{
+   transform:scale(1.3);
+}
+
+/*------------------------------------------background when form is open*/
+
+#bgdd{
+    height:100%;
+    width:100%;
+    position:fixed;
+    background-color:gray;
+    opacity:0.5;
+    display:none;
+    z-index:2;
+}
+
+
+/*-------------------------------------------------------------Add std,ass,tr-----------------------------------------------*/
+
+.ad_tr, .ad_st, .ad_as, .ad_cs_tr,.ad_cs_as,.ad_cs_st {
+    width: 100px;
+    height: 40px;
+    font-size:12px;
+    background-color: #beab94;
+    font-weight:bold;
+    margin-top:5px;
+    margin-left:20px;
+}
+
+    .ad_tr:hover, .ad_st:hover, .ad_as:hover, .ad_cs_tr:hover, .ad_cs_as:hover,.ad_cs_st:hover {
+        transform: scale(1.1);
+    }
+
+#form_st, #form_as, #form_tr, #form_cs_tr, #form_cs_as,#form_cs_st {
+    position: absolute;
+    margin: 0 auto;
+    top: 150px;
+    left: 650px;
+    width: 400px;
+    height: 150px;
+    background-image: url(../images/9b5eab9158f3cda48e8751cc2670e121.jpg);
+    border-radius: 10px;
+    box-shadow: 0px 0px 60px 0px #424242;
+    padding: 60px;
+    font-size: 15px;
+    font-family: helvetica;
+    display: none;
+    z-index: 3;
+}
+
+.sel_list{
+    width:180px;
+    height:30px;
+    font-weight:bold;
+}
+
+#remove_as, #remove_tr, #remove_st ,#remove_sta ,#remove_cs_tr ,#remove_cs_as,#remove_cs_st{
+    font-size:13px;
+}
+
+
+
+#form_sta {
+    position: absolute;
+    margin: 0 auto;
+    top: 150px;
+    left: 650px;
+    width: 400px;
+    height: 150px;
+    background-image: url(../images/9b5eab9158f3cda48e8751cc2670e121.jpg);
+    border-radius: 10px;
+    box-shadow: 0px 0px 60px 0px #424242;
+    padding: 60px;
+    font-size: 15px;
+    font-family: helvetica;
+    display: none;
+    z-index: 3;
 }

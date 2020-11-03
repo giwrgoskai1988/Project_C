@@ -6,8 +6,10 @@
     <link href="../css/mystyle.css" rel="stylesheet" />
 </head>
 <body>
-    <div class="container">
 
+    <div id="bgdd"></div>
+
+    <div class="container">
         <div class="header">
             <header>
                 <img class="logo" src="../images/logo.png" alt="Our Logo" />
@@ -23,7 +25,7 @@
                     <li><a href="#">About us</a></li>
                     <li><a href="#">Staff</a></li>
                     <li><a href="#">Campus</a></li>
-                    <li><a href="#">Languages</a></li>
+                    <li><a href="../top_nav_pages/Careers.html">Careers</a></li>
                     <li><a href="../Index.html">Home</a></li>
                 </ul>
             </nav>
@@ -37,7 +39,7 @@
                 <div class="login">
                     <form>
                         <label for="username">Username</label>
-                        <input id="username" type="text" name="Username" value="" placeholder="Username" required autocomplete="off" />
+                        <input id="username" type="text" name="Username" value="" placeholder="Username" required autocomplete="off" minlength="10" />
                         <label for="password">Password</label>
                         <input id="password" type="password" name="Password" value="" autocomplete="off" placeholder="Password" required minlength="10" />
                         <input id="login" type="submit" name="login" value="Log in" />
@@ -50,36 +52,231 @@
                         <li><a href="Trainers.html">Trainers</a></li>
                         <li><a href="#">Students</a></li>
                         <li><a href="Assignments.html">Assignments</a></li>
-                        <li><a href="Students_Assignments.html">Assignments per Student</a></li>
                     </ul>
                 </nav>
             </aside>
         </div>
 
         <div class="main_content">
+
             <div class="table">
-                <table>
-                    <tr>
-                        <th>Student ID</th>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Date of Birth</th>
-                        <th>Tuition Fees</th>
-                    </tr>
+                <table class="table">
+                    <caption>Students</caption>
+                    <thead>
+                        <tr>
+                            <th>Student ID</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Date of Birth</th>
+                            <th>Tuition Fees</th>
+                            <th>Courses</th>
+                            <th>Assignments</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="student_data">
+                        <tr>
+                            <td>1</td>
+                            <td>Nick</td>
+                            <td>Micheals</td>
+                            <td>2000-05-07</td>
+                            <td>1500</td>
+                            <td>
+                                <ul>
+                                    <li><b>3</b>-CB11-C#-Full time</li>
+                                    <li><b>4</b>-CB08-Javascript -Part Time</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li><b>1</b>-Data Types</li>
+                                    <li><b>4</b>-Methods</li>
+                                    <li><b>4</b>-Sorting</li>
+                                    <li><b>3</b>-Classes</li>
+                                </ul>
+                            </td>
+                            <td><p class="student_edit">Edit</p><p class="student_delete">Delete</p><hr /><button class="ad_as">Add Assignment</button><button class="ad_cs_st">Add To Course</button></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Micheal</td>
+                            <td>Scott</td>
+                            <td>1988-07-19</td>
+                            <td>2500</td>
+                            <td>
+                                <ul>
+                                    <li><b>1</b>-CB11-Python-Full time</li>
+                                    <li><b>4</b>-CB08-Javascript -Part Time</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li><b>1</b>-Data Types</li>
+                                    <li><b>4</b>-Methods</li>
+                                    <li><b>2</b>-Interfaces</li>
+                                    <li><b>4</b>-Sorting</li>
+                                    <li><b>3</b>-Classes</li>
+                                </ul>
+                            </td>
+                            <td><p class="student_edit">Edit</p><p class="student_delete">Delete</p><hr /><button class="ad_as">Add Assignment</button><button class="ad_cs_st">Add To Course</button></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Pam</td>
+                            <td>Beasley</td>
+                            <td>1995-12-22</td>
+                            <td>2000</td>
+                            <td>
+                                <ul>
+                                    <li><b>2</b>-CB11-Python-Part time</li>
+                                    <li><b>5</b>-CB08-Java-Part Time</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li><b>1</b>-Data Types</li>
+                                    <li><b>4</b>-Methods</li>
+                                    <li><b>4</b>-Sorting</li>
+                                    <li><b>3</b>-Classes</li>
+                                </ul>
+                            </td>
+                            <td><p class="student_edit">Edit</p><p class="student_delete">Delete</p><hr /><button class="ad_as">Add Assignment</button><button class="ad_cs_st">Add To Course</button></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Jim</td>
+                            <td>Halpert</td>
+                            <td>1995-09-14</td>
+                            <td>2500</td>
+                            <td>
+                                <ul>
+                                    <li><b>1</b>-CB11-Python-Full time</li>
+                                    <li><b>5</b>-CB08-Java-Part Time</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li><b>1</b>-Data Types</li>
+                                    <li><b>4</b>-Methods</li>
+                                    <li><b>2</b>-Classes</li>
+                                    <li><b>2</b>-Interfaces</li>
+                                </ul>
+                            </td>
+                            <td><p class="student_edit">Edit</p><p class="student_delete">Delete</p><hr /><button class="ad_as">Add Assignment</button><button class="ad_cs_st">Add To Course</button></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Oscar</td>
+                            <td>Martinez</td>
+                            <td>1996-01-15</td>
+                            <td>2000</td>
+                            <td>
+                                <ul>
+                                    <li><b>3</b>-CB11-C#-Part time</li>
+                                    <li><b>4</b>-CB08-JavaScript-Part Time</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li><b>2</b>-Classes</li>
+                                    <li><b>3</b>-Interfaces</li>
+                                    <li><b>1</b>-Methods</li>
+                                </ul>
+                            </td>
+                            <td><p class="student_edit">Edit</p><p class="student_delete">Delete</p><hr /><button class="ad_as">Add Assignment</button><button class="ad_cs_st">Add To Course</button></td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
 
-        </div>
 
+            <div id="form_sta">
+                <form>
+                    <select class="sel_list">
+                        <option value="value">1-DataTypes</option>
+                        <option value="value">2-Methods</option>
+                        <option value="value">3-Classes</option>
+                        <option value="value">4-Sorting</option>
+                        <option value="value">5-Interfaces</option>
+                    </select>
+                    <br />
+                    <input id="submit_sta" type="submit" name="name" value="Add Assignment" />
+                    <input id="remove_sta" type="submit" name="name" value="Remove Assignment" />
+                    <input class="close" type="button" name="cancel" value="Cancel" />
+                </form>
+            </div>
+            <div id="form_cs_st">
+                <form>
+                    <select class="sel_list">
+                        <option value="value">1-CB10-Python-Part Time</option>
+                        <option value="value">2-CB10-Python-Full Time</option>
+                        <option value="value">3-CB11-Javascript-Part Time</option>
+                        <option value="value">4-CB10-C#-Full Time</option>
+                        <option value="value">5-CB10-C++ -Part Time</option>
+                    </select>
+                    <br />
+                    <input id="submit_cs_st" type="submit" name="name" value="Add To Course" />
+                    <input id="remove_cs_st" type="submit" name="name" value="Remove From Course" />
+                    <input class="close" type="button" name="cancel" value="Cancel" />
+                </form>
+            </div>
+
+
+            <div id="add_student">
+
+                <p id="create_student">Add Student</p>
+
+                <div id="student_formCreate">
+                    <form id="student_forma" onkeypress="return event.keyCode != 13;">
+                        <label for="student_id">Student ID</label>
+                        <br />
+                        <input id="student_id" type="number" name="student_id" value="" placeholder="1,2,3" required min="0" />
+                        <hr />
+
+                        <label for="student_first_name">First Name</label>
+                        <br />
+                        <input id="student_first_name" type="text" name="student_first_name" value="" placeholder="Micheal" required minlength="2" maxlength="50" pattern=".*\S+.*" />
+                        <hr />
+
+                        <label for="student_last_name">Last Name</label>
+                        <br />
+                        <input id="student_last_name" type="text" name="student_last_name" value="" placeholder="Papadopoulos" required maxlength="50" pattern=".*\S+.*" />
+                        <hr />
+
+                        <label for="date_of_birth">Date of Birth</label>
+                        <input id="date_of_birth" type="date" name="date_of_birth" value="" required />
+                        <hr />
+
+                        <label for="tuition_fees">Tuition Fees</label>
+                        <input id="tuition_fees" type="number" name="tuitfees" value="" placeholder="1000" required min="0" max="10000" step="any" />
+
+                        <br />
+
+                        <input id="submit_created_student" type="submit" name="add_student" value="Add Student" />
+                        <input id="submit_edited_student" type="submit" name="edit_student" value="Save Changes" />
+                        <input id="close_studentCreate" type="button" name="cancel" value="Cancel" />
+                    </form>
+                </div>
+            </div>
+        </div>
 
         <div class="footer">
             <footer>
-                <p>maybe some links</p>
-                <i>copyright bla bla</i>
+                <ul>
+                    <li><a href="https://www.facebook.com" target="_blank"><img src="../footer_icon/fb.png" alt="Our Facebook" /></a></li>
+                    <li><a href="https://www.twitter.com" target="_blank"><img src="../footer_icon/twitter.png" alt="Our Twitter" /></a></li>
+                    <li><a href="https://www.instagram.com" target="_blank"><img src="../footer_icon/insta.png" alt="Our Instagram" /></a></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <i>copyright &copy bla blcopyright bla blcopyright bla bla</i>
             </footer>
         </div>
 
     </div>
+
+    <script src="../Scripts/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="../js/student.js"></script>
 
 </body>
 </html>

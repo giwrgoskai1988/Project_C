@@ -4,8 +4,12 @@
     <meta charset="utf-8" />
     <title>Courses</title>
     <link href="../css/mystyle.css" rel="stylesheet" />
+    
+
 </head>
 <body>
+
+    <div id="bgdd"></div>
 
     <div class="container">
 
@@ -24,7 +28,7 @@
                     <li><a href="#">About us</a></li>
                     <li><a href="#">Staff</a></li>
                     <li><a href="#">Campus</a></li>
-                    <li><a href="#">Languages</a></li>
+                    <li><a href="../top_nav_pages/Careers.html">Careers</a></li>
                     <li><a href="../Index.html">Home</a></li>
                 </ul>
             </nav>
@@ -38,7 +42,7 @@
                 <div class="login">
                     <form>
                         <label for="username">Username</label>
-                        <input id="username" type="text" name="Username" value="" placeholder="Username" required autocomplete="off" />
+                        <input id="username" type="text" name="Username" value="" placeholder="Username" required autocomplete="off" minlength="10" />
                         <label for="password">Password</label>
                         <input id="password" type="password" name="Password" value="" autocomplete="off" placeholder="Password" required minlength="10" />
                         <input id="login" type="submit" name="login" value="Log in" />
@@ -51,37 +55,251 @@
                         <li><a href="Trainers.html">Trainers</a></li>
                         <li><a href="Students.html">Students</a></li>
                         <li><a href="Assignments.html">Assignments</a></li>
-                        <li><a href="Students_Assignments.html">Assignments per Student</a></li>
                     </ul>
                 </nav>
             </aside>
         </div>
 
         <div class="main_content">
+
             <div class="table">
-                <table>
-                    <tr>
-                        <th>Course ID</th>
-                        <th>Title</th>
-                        <th>Stream</th>
-                        <th>Type</th>
-                        <th>Start Date</th>
-                        <th>End Date</th>
-                    </tr>
+                <table class="table">
+                    <caption>Courses</caption>
+                    <thead id="course_head">
+                        <tr>
+                            <th>Course ID</th>
+                            <th>Title</th>
+                            <th>Stream</th>
+                            <th>Type</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>Students</th>
+                            <th>Trainers</th>
+                            <th>Assign</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="course_data">
+                        <tr>
+                            <td>1</td>
+                            <td>CB10</td>
+                            <td>Python</td>
+                            <td>Part Time</td>
+                            <td>2020-05-08</td>
+                            <td>2020-09-05</td>
+                            <td>
+                                <ul>
+                                    <li><b>3</b>-George Lin</li>
+                                    <li><b>1</b>-Micheal Scott</li>
+                                    <li><b>5</b>-Pam Beasley</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li><b>1</b>-Nick Berns</li>
+                                    <li><b>4</b>-Donald Trump</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li><b>4</b>-Sorting</li>
+                                    <li><b>3</b>-Classes</li>
+                                </ul>
+                            </td>
+                            <td><p class="course_edit">Edit</p><p class="course_delete">Delete</p>
+                                                               </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>CB10</td>
+                            <td>Python</td>
+                            <td>Full Time</td>
+                            <td>2020-07-07</td>
+                            <td>2021-01-08</td>
+                            <td>
+                                <ul>
+                                    <li><b>4</b>-Oscar Martinez</li>
+                                    <li><b>1</b>-Micheal Scott</li>
+                                    <li><b>2</b>-Jim Halpert</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li><b>1</b>-Geo Lin</li>
+                                    <li><b>3</b>-Linda Margot</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li><b>1</b>-Methods</li>
+                                    <li><b>2</b>-Interfaces</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <p class="course_edit">Edit</p><p class="course_delete">Delete</p>
+                               
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>CB11</td>
+                            <td>Javascript</td>
+                            <td>Part Time</td>
+                            <td>2020-07-08</td>
+                            <td>2021-11-09</td>
+                            <td>
+                                <ul>
+                                    <li><b>3</b>-George Lin</li>
+                                    <li><b>1</b>-Micheal Scott</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li><b>5</b>-Joe Biden</li>
+                                    <li><b>1</b>-Linda Margot</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li><b>1</b>-Data Types</li>
+                                    <li><b>4</b>-Methods</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <p class="course_edit">Edit</p><p class="course_delete">Delete</p>
+                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>CB10</td>
+                            <td>C#</td>
+                            <td>Full Time</td>
+                            <td>2020-05-08</td>
+                            <td>2020-12-04</td>
+                            <td>
+                                <ul>
+                                    <li><b>2</b>-Jim Halpert</li>
+                                    <li><b>5</b>-Oscar Martinez</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li><b>1</b>-Geo Lin</li>
+                                    <li><b>2</b>-Nick Berns</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li><b>2</b>-Classes</li>
+                                    <li><b>3</b>-Interfaces</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <p class="course_edit">Edit</p><p class="course_delete">Delete</p>
+                               
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>CB10</td>
+                            <td>C++</td>
+                            <td>Part Time</td>
+                            <td>2020-04-08</td>
+                            <td>2020-08-04</td>
+                            <td>
+                                <ul>
+                                    <li><b>3</b>-Pam Beasley</li>
+                                    <li><b>4</b>-Jim Halpert</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li><b>1</b>-Donald Trump</li>
+                                    <li><b>2</b>-Joe Biden</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li><b>1</b>-Data Types</li>
+                                    <li><b>4</b>-Methods</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <p class="course_edit">Edit</p><p class="course_delete">Delete</p>
+                              
+                            </td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
 
-        </div>
+            <div id="add_course">
 
+                <p id="create_course">Add Course</p>
+
+                <div id="course_formCreate">
+                    <form id="course_forma" onkeypress="return event.keyCode != 13;">
+                        <label for="course_id">Course ID</label>
+                        <br />
+                        <input id="course_id" type="number" name="course_id" value="" placeholder="1,2,3" required min="0" />
+                        <hr />
+
+                        <label for="course_title">Course Title</label>
+                        <br />
+                        <input id="course_title" type="text" name="course_title" value="" placeholder="CB00" required minlength="4" maxlength="5" pattern=".*\S+.*" />
+                        <hr />
+
+                        <label for="course_stream">Course Stream</label>
+                        <br />
+                        <input id="course_stream" type="text" name="course_stream" value="" placeholder="Python,Java,C#" required maxlength="50"  pattern=".*\S+.*"/>
+                        <hr />
+
+                        <label for="course_type">Course Type</label>
+                        <br />
+
+                        <label for="full_time" style="font-weight:normal;">Full Time</label>
+                        <input id="full_time" type="radio" name="course_type" value="Full Time" checked required></>
+                        <label for="part_time" style="font-weight:normal;">Part time</label>
+                        <input id="part_time" type="radio" name="course_type" value="Part Time" /></>
+
+                        <hr />
+
+                        <label for="start_date">Course Start Date</label>
+                        <input id="start_date" type="date" name="course_start_date" value="" required />
+                        <hr />
+
+                        <label for="end_date">Course End Date</label>
+                        <input id="end_date" type="date" name="course_end_date" value="" required />
+
+                        <br />
+
+
+                        <input id="submit_created_course" type="submit" name="add_course" value="Add Course" />
+                        <input id="submit_edited_course" type="submit" name="edit_course" value="Save Changes" />
+                        <input id="close_courseCreate" type="button" name="cancel" value="Cancel" />
+                    </form>
+                </div>
+            </div>
+        </div>
 
         <div class="footer">
             <footer>
-                <p>maybe some links</p>
-                <i>copyright bla bla</i>
+                <ul>
+                    <li><a href="https://www.facebook.com" target="_blank"><img src="../footer_icon/fb.png" alt="Our Facebook" /></a></li>
+                    <li><a href="https://www.twitter.com" target="_blank"><img src="../footer_icon/twitter.png" alt="Our Twitter" /></a></li>
+                    <li><a href="https://www.instagram.com" target="_blank"><img src="../footer_icon/insta.png" alt="Our Instagram" /></a></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <i>copyright &copy bla blcopyright bla blcopyright bla bla</i>
             </footer>
         </div>
 
     </div>
+
+    <script type="text/javascript" src="../js/course.js"></script>
+    
 
 </body>
 </html>

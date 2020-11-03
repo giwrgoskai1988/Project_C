@@ -7,6 +7,8 @@
 </head>
 <body>
 
+    <div id="bgdd"></div>
+
     <div class="container">
 
         <div class="header">
@@ -24,7 +26,7 @@
                     <li><a href="#">About us</a></li>
                     <li><a href="#">Staff</a></li>
                     <li><a href="#">Campus</a></li>
-                    <li><a href="#">Languages</a></li>
+                    <li><a href="../top_nav_pages/Careers.html">Careers</a></li>
                     <li><a href="../Index.html">Home</a></li>
                 </ul>
             </nav>
@@ -38,7 +40,7 @@
                 <div class="login">
                     <form>
                         <label for="username">Username</label>
-                        <input id="username" type="text" name="Username" value="" placeholder="Username" required autocomplete="off" />
+                        <input id="username" type="text" name="Username" value="" placeholder="Username" required autocomplete="off" minlength="10" />
                         <label for="password">Password</label>
                         <input id="password" type="password" name="Password" value="" autocomplete="off" placeholder="Password" required minlength="10" />
                         <input id="login" type="submit" name="login" value="Log in" />
@@ -51,39 +53,186 @@
                         <li><a href="Trainers.html">Trainers</a></li>
                         <li><a href="Students.html">Students</a></li>
                         <li><a href="#">Assignments</a></li>
-                        <li><a href="Students_Assignments.html">Assignments per Student</a></li>
                     </ul>
                 </nav>
             </aside>
         </div>
 
         <div class="main_content">
-            <div class="table">
-                <table>
-                    <tr>
-                        <th>Assignment ID</th>
-                        <th>Title</th>
-                        <th>Description</th>
-                        <th>Submit Until</th>
-                        <th>Oral Mark</th>
-                        <th>Total Mark</th>
-                    </tr>
-                </table>
 
+            <div class="table">
+                <table class="table">
+                    <caption>Assignments</caption>
+                    <thead id="ass_head">
+                        <tr>
+                            <th>Ass ID</th>
+                            <th>Title</th>
+                            <th>Description</th>
+                            <th>Submit Until</th>
+                            <th>Oral Mark</th>
+                            <th>Total Mark</th>
+                            <th>Courses</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="ass_data">
+                        <tr>
+                            <td>1</td>
+                            <td>DataTypes</td>
+                            <td>Explain all data types</td>
+                            <td>2020-08-09</td>
+                            <td>20</td>
+                            <td>50</td>
+                            <td>
+                                <ul>
+                                    <li><b>3</b>-CB11-C#-Full time</li>
+                                    <li><b>4</b>-CB08-Javascript -Part Time</li>
+                                </ul>
+                            </td>
+                            <td><p class="ass_edit">Edit</p><p class="ass_delete">Delete</p><hr /><button class="ad_cs_as">Add To Course</button></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Methods</td>
+                            <td>Create all types of Methods</td>
+                            <td>2021-01-22</td>
+                            <td>25</td>
+                            <td>50</td>
+                            <td>
+                                <ul>
+                                    <li><b>1</b>-CB11-Python-Full time</li>
+                                    <li><b>4</b>-CB08-Javascript -Part Time</li>
+                                </ul>
+                            </td>
+                            <td><p class="ass_edit">Edit</p><p class="ass_delete">Delete</p><hr /><button class="ad_cs_as">Add To Course</button></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Classes</td>
+                            <td>Create a class</td>
+                            <td>2020-11-22</td>
+                            <td>30</td>
+                            <td>60</td>
+                            <td>
+                                <ul>
+                                    <li><b>2</b>-CB11-Python-Part time</li>
+                                    <li><b>5</b>-CB08-Java-Part Time</li>
+                                </ul>
+                            </td>
+                            <td><p class="ass_edit">Edit</p><p class="ass_delete">Delete</p><hr /><button class="ad_cs_as">Add To Course</button></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Sorting</td>
+                            <td>Sort lists and arrays</td>
+                            <td>2020-09-14</td>
+                            <td>40</td>
+                            <td>70</td>
+                            <td>
+                                <ul>
+                                    <li><b>1</b>-CB11-Python-Full time</li>
+                                    <li><b>5</b>-CB08-Java-Part Time</li>
+                                </ul>
+                            </td>
+                            <td><p class="ass_edit">Edit</p><p class="ass_delete">Delete</p><hr /><button class="ad_cs_as">Add To Course</button></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Interface</td>
+                            <td>Design an interface menu</td>
+                            <td>2020-04-12</td>
+                            <td>50</td>
+                            <td>80</td>
+                            <td>
+                                <ul>
+                                    <li><b>3</b>-CB11-C#-Part time</li>
+                                    <li><b>4</b>-CB08-JavaScript-Part Time</li>
+                                </ul>
+                            </td>
+                            <td><p class="ass_edit">Edit</p><p class="ass_delete">Delete</p><hr /><button class="ad_cs_as">Add To Course</button></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
 
-        </div>
+            <div id="form_cs_as">
+                <form>
+                    <select class="sel_list">
+                        <option value="value">1-CB10-Python-Part Time</option>
+                        <option value="value">2-CB10-Python-Full Time</option>
+                        <option value="value">3-CB11-Javascript-Part Time</option>
+                        <option value="value">4-CB10-C#-Full Time</option>
+                        <option value="value">5-CB10-C++ -Part Time</option>
+                    </select>
+                    <br />
+                    <input id="submit_cs_tr" type="submit" name="name" value="Add To Course" />
+                    <input id="remove_cs_tr" type="submit" name="name" value="Remove From Course" />
+                    <input class="close" type="button" name="cancel" value="Cancel" />
+                </form>
+            </div>
 
+            <div id="add_ass">
+
+                <p id="create_ass">Add Assignment</p>
+
+                <div id="ass_formCreate">
+                    <form id="ass_forma" onkeypress="return event.keyCode != 13;">
+                        <label for="ass_id">Assignment ID</label>
+                        <br />
+                        <input id="ass_id" type="number" name="ass_id" value="" placeholder="1,2,3" required min="0" />
+                        <hr />
+
+                        <label for="ass_title">Assignment Title</label>
+                        <br />
+                        <input id="ass_title" type="text" name="ass_title" value="" placeholder="Methods,Interfaces" required minlength="2" maxlength="50" pattern=".*\S+.*" />
+                        <hr />
+
+                        <label for="ass_descri">Assignment Description</label>
+                        <br />
+                        <input id="ass_descri" type="text" name="ass_descri" value="" placeholder="Create a calculator" required maxlength="200" pattern=".*\S+.*" />
+                        <hr />
+
+                        <label for="sub_til">Submit Until</label>
+                        <input id="sub_til" type="date" name="sub_til" value="" required />
+                        <hr />
+
+                        <label for="oral_mark">Oral Mark</label>
+                        <input id="oral_mark" type="number" name="oralmark" value="" placeholder="10,20..." required min="1" max="100" />
+
+                        <hr />
+
+                        <label for="total_mark">Total Mark</label>
+                        <input id="total_mark" type="number" name="totalmark" value="" placeholder="10,20..." required min="1" max="100" />
+
+                        <br />
+
+
+                        <input id="submit_created_ass" type="submit" name="add_ass" value="Add Assignment" />
+                        <input id="submit_edited_ass" type="submit" name="edit_course" value="Save Changes" />
+                        <input id="close_assCreate" type="button" name="cancel" value="Cancel" />
+                    </form>
+                </div>
+            </div>
+        </div>
 
         <div class="footer">
             <footer>
-                <p>maybe some links</p>
-                <i>copyright bla bla</i>
+                <ul>
+                    <li><a href="https://www.facebook.com" target="_blank"><img src="../footer_icon/fb.png" alt="Our Facebook" /></a></li>
+                    <li><a href="https://www.twitter.com" target="_blank"><img src="../footer_icon/twitter.png" alt="Our Twitter" /></a></li>
+                    <li><a href="https://www.instagram.com" target="_blank"><img src="../footer_icon/insta.png" alt="Our Instagram" /></a></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <i>copyright &copy bla blcopyright bla blcopyright bla bla</i>
             </footer>
         </div>
 
     </div>
 
+    <script src="../Scripts/jquery-3.5.1.js"></script>
+
+    <script type="text/javascript" src="../js/assignment.js"></script>
 
 </body>
 </html>
